@@ -1,0 +1,474 @@
+runcpu v6247 started at 2023-06-14 21:15:25 on "fabricio-server"
+runcpu is: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/harness/runcpu
+runcpu: runcpu --config=gcc-try1 --size=all --iterations=2 605.mcf_s
+toolset: linux-x86_64
+suite: CPU2017 1.1.0
+
+Locating benchmarks...found 47 benchmarks in 53 benchsets.
+Reading config file '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/config/gcc-try1.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode        Workload            Report Type      Benchmarks
+--------   --------   -------------------   -----------------   ---------------
+validate   speed      test,train,refspeed   SPECspeed2017_int   605.mcf_s      
+-------------------------------------------------------------------------------
+
+Setting up environment for running 605.mcf_s...
+Starting runcpu for 605.mcf_s...
+Running "specperl /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/sysinfo" to gather system information.
+sysinfo: r6365 of 2019-08-21 (295195f888a3d7edb1e6e46a485a0011)
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting OS info
+sysinfo: ...getting CPU vulnerability status from the kernel
+sysinfo: ...getting disk info
+sysinfo: ...trying to get info from /sys/devices/virtual/dmi/id
+sysinfo: ...trying to get info from dmidecode
+Read 130 info lines from the sysinfo program.
+Retrieving flags file (/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test,train,refspeed
+benchmarks= 605.mcf_s
+outputs   = txt,html,cfg,pdf,csv
+username  = fabricio
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/lib64/:%{gcc_dir}/lib/:/lib64"
+
+Benchmarks selected: 605.mcf_s
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize           -fopenmp -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize        -fopenmp -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --tar
+get=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+  Up to date 605.mcf_s base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 605.mcf_s test base mytest-m64: run_base_test_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running (#1) 605.mcf_s test base mytest-m64 threads:4 [2023-06-14 21:15:27]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_test_mytest-m64.0000/mcf_s_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-06-14 21:15:27 (1686788127.65713)
+Stop command: 2023-06-14 21:15:34 (1686788134.29083)
+Elapsed time for command: 00:00:06 (6.63369297981262)
+Workload elapsed time (copy 0 workload 1) = 6.477727 seconds
+Copy 0 of 605.mcf_s (base test) run 1 finished at 2023-06-14 21:15:34.  Total elapsed time: 6.477727
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-06-14 21:15:34 (1686788134.31789)
+Stop command: 2023-06-14 21:15:34 (1686788134.6378)
+Elapsed time for command: 00:00:00 (0.319914817810059)
+Benchmark Times:
+  Run Start:    2023-06-14 21:15:27 (1686788127)
+  Run Stop:     2023-06-14 21:15:34 (1686788134)
+  Run Elapsed:  00:00:07 (7)
+  Run Reported: 00:00:06 (6 477763000 6.477763)
+ Success 605.mcf_s base test ratio=-0.00, runtime=6.477763, copies=1, threads=4, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 605.mcf_s test base mytest-m64 threads:4 [2023-06-14 21:15:34]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_test_mytest-m64.0000/mcf_s_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-06-14 21:15:34 (1686788134.71797)
+Stop command: 2023-06-14 21:15:41 (1686788141.28395)
+Elapsed time for command: 00:00:06 (6.56597304344177)
+Workload elapsed time (copy 0 workload 1) = 6.40776 seconds
+Copy 0 of 605.mcf_s (base test) run 2 finished at 2023-06-14 21:15:41.  Total elapsed time: 6.40776
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-06-14 21:15:41 (1686788141.31081)
+Stop command: 2023-06-14 21:15:41 (1686788141.62932)
+Elapsed time for command: 00:00:00 (0.318511009216309)
+Benchmark Times:
+  Run Start:    2023-06-14 21:15:34 (1686788134)
+  Run Stop:     2023-06-14 21:15:41 (1686788141)
+  Run Elapsed:  00:00:07 (7)
+  Run Reported: 00:00:06 (6 407821000 6.407821)
+ Success 605.mcf_s base test ratio=-0.00, runtime=6.407821, copies=1, threads=4, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 2x605.mcf_s
+Producing Raw Reports
+ label: mytest-m64
+  workload: test
+   benchset: intspeed
+   metric: SPECspeed2017_int_base
+    format: raw -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.rsf
+Parsing flags for 605.mcf_s base: done
+Doing flag reduction: done
+    format: flags -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.flags.html
+    format: cfg -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.cfg
+    format: CSV -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.csv
+    format: PDF -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.pdf
+    format: HTML -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.html
+    format: Text -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.test.txt
+   benchset: intrate
+   benchset: fpspeed
+   benchset: fprate
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test,train,refspeed
+benchmarks= 605.mcf_s
+outputs   = txt,html,cfg,pdf,csv
+username  = fabricio
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/lib64/:%{gcc_dir}/lib/:/lib64"
+
+Benchmarks selected: 605.mcf_s
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize           -fopenmp -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize        -fopenmp -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --tar
+get=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+  Up to date 605.mcf_s base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 605.mcf_s train base mytest-m64: run_base_train_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running (#1) 605.mcf_s train base mytest-m64 threads:4 [2023-06-14 21:15:44]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_train_mytest-m64.0000/mcf_s_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-06-14 21:15:44 (1686788144.32478)
+Stop command: 2023-06-14 21:16:20 (1686788180.19363)
+Elapsed time for command: 00:00:35 (35.8688499927521)
+Workload elapsed time (copy 0 workload 1) = 35.712884 seconds
+Copy 0 of 605.mcf_s (base train) run 1 finished at 2023-06-14 21:16:20.  Total elapsed time: 35.712884
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-06-14 21:16:20 (1686788180.22155)
+Stop command: 2023-06-14 21:16:20 (1686788180.53996)
+Elapsed time for command: 00:00:00 (0.318413972854614)
+Benchmark Times:
+  Run Start:    2023-06-14 21:15:44 (1686788144)
+  Run Stop:     2023-06-14 21:16:20 (1686788180)
+  Run Elapsed:  00:00:36 (36)
+  Run Reported: 00:00:35 (35 712923000 35.712923)
+ Success 605.mcf_s base train ratio=-0.00, runtime=35.712923, copies=1, threads=4, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 605.mcf_s train base mytest-m64 threads:4 [2023-06-14 21:16:20]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_train_mytest-m64.0000/mcf_s_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-06-14 21:16:20 (1686788180.6259)
+Stop command: 2023-06-14 21:16:55 (1686788215.30174)
+Elapsed time for command: 00:00:34 (34.6758439540863)
+Workload elapsed time (copy 0 workload 1) = 34.517016 seconds
+Copy 0 of 605.mcf_s (base train) run 2 finished at 2023-06-14 21:16:55.  Total elapsed time: 34.517016
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_train_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-06-14 21:16:55 (1686788215.32963)
+Stop command: 2023-06-14 21:16:55 (1686788215.6487)
+Elapsed time for command: 00:00:00 (0.319069862365723)
+Benchmark Times:
+  Run Start:    2023-06-14 21:16:20 (1686788180)
+  Run Stop:     2023-06-14 21:16:55 (1686788215)
+  Run Elapsed:  00:00:35 (35)
+  Run Reported: 00:00:34 (34 517076000 34.517076)
+ Success 605.mcf_s base train ratio=-0.00, runtime=34.517076, copies=1, threads=4, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 2x605.mcf_s
+Producing Raw Reports
+ label: mytest-m64
+  workload: train
+   benchset: intspeed
+   metric: SPECspeed2017_int_base
+    format: raw -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.rsf
+Parsing flags for 605.mcf_s base: done
+Doing flag reduction: done
+    format: flags -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.flags.html
+    format: cfg -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.cfg
+    format: CSV -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.csv
+    format: PDF -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.pdf
+    format: HTML -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.html
+    format: Text -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.train.txt
+   benchset: intrate
+   benchset: fpspeed
+   benchset: fprate
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = mytest-m64
+Size      = test,train,refspeed
+benchmarks= 605.mcf_s
+outputs   = txt,html,cfg,pdf,csv
+username  = fabricio
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/lib64/:%{gcc_dir}/lib/:/lib64"
+
+Benchmarks selected: 605.mcf_s
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize           -fopenmp -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize        -fopenmp -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --tar
+get=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+  Up to date 605.mcf_s base mytest-m64
+
+
+Setting Up Run Directories
+  Setting up 605.mcf_s refspeed (ref) base mytest-m64: run_base_refspeed_mytest-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running (#1) 605.mcf_s refspeed (ref) base mytest-m64 threads:4 [2023-06-14 21:16:58]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_refspeed_mytest-m64.0000/mcf_s_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-06-14 21:16:58 (1686788218.34292)
+Stop command: 2023-06-14 21:24:53 (1686788693.47213)
+Elapsed time for command: 00:07:55 (475.129208803177)
+Workload elapsed time (copy 0 workload 1) = 474.972597 seconds
+Copy 0 of 605.mcf_s (base refspeed) run 1 finished at 2023-06-14 21:24:53.  Total elapsed time: 474.972597
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-06-14 21:24:53 (1686788693.50082)
+Stop command: 2023-06-14 21:24:53 (1686788693.8217)
+Elapsed time for command: 00:00:00 (0.320882081985474)
+Benchmark Times:
+  Run Start:    2023-06-14 21:16:58 (1686788218)
+  Run Stop:     2023-06-14 21:24:53 (1686788693)
+  Run Elapsed:  00:07:55 (475)
+  Run Reported: 00:07:54 (474 972637000 474.972637)
+ Success 605.mcf_s base refspeed ratio=9.94, runtime=474.972637, copies=1, threads=4, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 605.mcf_s refspeed (ref) base mytest-m64 threads:4 [2023-06-14 21:24:53]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000
+    -o inp.out -e inp.err ../run_base_refspeed_mytest-m64.0000/mcf_s_base.mytest-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-06-14 21:24:53 (1686788693.90259)
+Stop command: 2023-06-14 21:32:47 (1686789167.72664)
+Elapsed time for command: 00:07:53 (473.824043989182)
+Workload elapsed time (copy 0 workload 1) = 473.665404 seconds
+Copy 0 of 605.mcf_s (base refspeed) run 2 finished at 2023-06-14 21:32:47.  Total elapsed time: 473.665404
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '4'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '4')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/bin/specinvoke -d /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_mytest-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-06-14 21:32:47 (1686789167.75465)
+Stop command: 2023-06-14 21:32:48 (1686789168.07321)
+Elapsed time for command: 00:00:00 (0.318564891815186)
+Benchmark Times:
+  Run Start:    2023-06-14 21:24:53 (1686788693)
+  Run Stop:     2023-06-14 21:32:47 (1686789167)
+  Run Elapsed:  00:07:54 (474)
+  Run Reported: 00:07:53 (473 665465000 473.665465)
+ Success 605.mcf_s base refspeed ratio=9.97, runtime=473.665465, copies=1, threads=4, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 2x605.mcf_s
+Producing Raw Reports
+ label: mytest-m64
+  workload: refspeed (ref)
+   benchset: intspeed
+   metric: SPECspeed2017_int_base
+    format: raw -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.rsf
+Parsing flags for 605.mcf_s base: done
+Doing flag reduction: done
+    format: flags -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.flags.html
+    format: cfg -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.cfg
+    format: CSV -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.csv
+    format: PDF -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.pdf
+    format: HTML -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.html
+    format: Text -> /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.intspeed.refspeed.txt
+   benchset: intrate
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2023-06-14 21:32:50; 1043 total seconds elapsed
+Info: file_tail(5999): file '/media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/tmp/CPU2017.028/templogs/preenv.intspeed.028.0.debug' was removed and will no longer be followed.  No action is required.
+The log for this run is in /media/fabricio/679cbc52-a115-43bd-b089-5d44b8abcd6f/spec-cpu-2017/result/CPU2017.028.log
+
+runcpu finished at 2023-06-14 21:32:50; 1044 total seconds elapsed
